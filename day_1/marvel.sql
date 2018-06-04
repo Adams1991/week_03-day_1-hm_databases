@@ -65,3 +65,4 @@ INSERT INTO movies (title, year, show_time) VALUES ('Black Panther', 2018, '15:0
 -- INSERT INTO people (name) VALUES ('Zsolt	Podoba-szalia');
 -- DELETE FROM people WHERE name = 'Emily Milne';
 -- INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Infinity War', 2018, '00:00');
+UPDATE movies SET show_time = '21:05'  WHERE title = 'Guardians of the Galaxy 2';
