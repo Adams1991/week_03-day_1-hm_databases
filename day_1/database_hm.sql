@@ -36,8 +36,9 @@ DELETE FROM movies WHERE title = 'Batman Begins';
 INSERT INTO people (name) VALUES ('Zsolt	Podoba-szalia');
 -- 7.  Emily Milne has decided to hijack our movie evening, Remove her from the table of people.
 DELETE FROM people WHERE name = 'Emily Milne';
-8.  The cinema has just heard that they will be holding an exclusive midnight showing of 'Avengers: Infinity War'!! Create a new entry in the 'movies' table to reflect this.
-9.  The cinema would also like to make the Guardians movies a back to back feature. Find out the show time of "Guardians of the Galaxy" and set the show time of "Guardians of the Galaxy 2" to start two hours later.
+-- 8.  The cinema has just heard that they will be holding an exclusive midnight showing of 'Avengers: Infinity War'!! Create a new entry in the 'movies' table to reflect this.
+INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Infinity War', 2018, '00:00');
+-- 9.  The cinema would also like to make the Guardians movies a back to back feature. Find out the show time of "Guardians of the Galaxy" and set the show time of "Guardians of the Galaxy 2" to start two hours later.
 
 ## Extension
 
