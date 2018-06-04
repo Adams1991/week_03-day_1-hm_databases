@@ -39,7 +39,29 @@ DELETE FROM people WHERE name = 'Emily Milne';
 -- 8.  The cinema has just heard that they will be holding an exclusive midnight showing of 'Avengers: Infinity War'!! Create a new entry in the 'movies' table to reflect this.
 INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Infinity War', 2018, '00:00');
 -- 9.  The cinema would also like to make the Guardians movies a back to back feature. Find out the show time of "Guardians of the Galaxy" and set the show time of "Guardians of the Galaxy 2" to start two hours later.
+UPDATE movies SET show_time = '21:05'  WHERE title = 'Guardians of the Galaxy 2';
 
 ## Extension
 
-1.  Research how to delete multiple entries from your table in a single command.
+-- 1.  Research how to delete multiple entries from your table in a single command.
+
+104
+down vote
+If you need to delete based on a list, you can use IN:
+
+delete from your_table
+where id in (value1, value2, ...);
+If you need to delete based on the result of a query, you can also use IN:
+
+delete from your_table
+where id in (select aColumn from ...);
+(Notice that the subquery must return only one column)
+
+If you need to delete based on a range of values, either you use BETWEEN or you use inequalities:
+
+delete from your_table
+where id between bottom_value and top_value;
+or
+
+delete from your_table
+where id >= a_value and id <= another_value;
